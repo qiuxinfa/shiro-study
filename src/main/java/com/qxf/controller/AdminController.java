@@ -34,4 +34,10 @@ public class AdminController {
         Map<String,User> userMap = userService.getAllUser();
         return userMap.values();
     }
+
+    @GetMapping("/testPerms")
+    @RequiresPermissions("/admin")
+    public String testPerms(){
+        return "有 /admin 权限";
+    }
 }

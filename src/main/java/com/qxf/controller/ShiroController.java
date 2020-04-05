@@ -47,6 +47,4 @@ public class ShiroController {
     public String hello(){
         return "hello:"+SecurityUtils.getSubject().getPrincipal();
     }
-
-
 }
